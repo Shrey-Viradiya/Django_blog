@@ -1,4 +1,5 @@
 {% load static %}
+{% load crispy_forms_tags %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -42,6 +43,13 @@
       <main role="main" class="container">
             <div class="row">
               <div class="col-md-8">
+                {% if messages %}
+                  {% for message in messages%}
+                  <div class="alert alert-{{ message.tags }}">
+                    {{message}}
+                  </div>
+                  {% endfor %}
+                {% endif %}
                 {% block content %}{% endblock %}
               </div>
               <div class="col-md-4">
