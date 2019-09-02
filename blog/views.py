@@ -21,7 +21,7 @@ class PostDetailView(DetailView):
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
-    fields = ['title','content']
+    fields = ['title','subtitle','content']
     # use 'success url' for going to specific after after creating a post
 
     def form_valid(self, form):
@@ -30,7 +30,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
 
 class PostUpdateView(LoginRequiredMixin,UserPassesTestMixin , UpdateView):
     model = Post
-    fields = ['title','content']
+    fields = ['title','subtitle','content']
     # use 'success url' for going to specific after after creating a post
 
     def form_valid(self, form):

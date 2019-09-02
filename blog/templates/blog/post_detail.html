@@ -6,6 +6,7 @@
     <img class="rounded-circle" src="{{ object.author.profile.image.url }}" style="height: 100px; width: 100px; margin-right: 15px;margin-top: 30px">
     <div class="post-preview">       
             <h2 class="post-title">{{ object.title }}</h2>
+            <h4 class="">{{ object.subtitle }}</h4>
             <p class="post-meta">Posted by <a class="mr-2" href="#">{{ object.author }}</a> on <small class="text-muted">{{ object.date_posted|date:"F d, Y (l)" }}</small></p>
             <p class="post-subtitle">{{ object.content }}</p>
         {% if object.author == user %}
