@@ -144,7 +144,7 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
 
 
 # Activate Django-Heroku.
-django_heroku.settings(locals()).
+django_heroku.settings(locals())
 
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
